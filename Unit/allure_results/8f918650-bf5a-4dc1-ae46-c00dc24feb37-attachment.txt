@@ -1,0 +1,5 @@
+setup_module：整个.py模块只执行一次
+比如：所有用例开始前只打开一次浏览器
+setup_function：每个用例开始前都会执行
+正在执行----test_one
+teardown_function：每个用例结束前都会执行
