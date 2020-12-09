@@ -1,0 +1,6 @@
+setup:类中单个用例执行之前
+正在执行----test_four
+teardown_method:类中单个用例执行之后
+teardown_class：所有用例执行之前
+teardown_module：整个.py模块只执行一次
+比如：所有用例结束只最后关闭浏览器

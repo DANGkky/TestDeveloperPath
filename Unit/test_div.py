@@ -3,15 +3,15 @@ import pytest
 from Unit.div import div
 
 
-@pytest.mark.happy
-@pytest.mark.parametrize
-def test_div_int():
-    assert div(10, 5) == 2
-    assert div(10, 2) == 5
-    assert div(10000000, 1) == 10000000
+# @pytest.mark.happy
+# @pytest.mark.parametrize
+# def test_div_int():
+#     assert div(10, 5) == 2
+#     assert div(10, 2) == 5
+#     assert div(10000000, 1) == 10000000
 
 
-@pytest.mark.happy
+@pytest.mark.abc
 @pytest.mark.parametrize("number1,number2,expectation", {
     (10, 2, 5),
     (10, 5, 2),
@@ -28,8 +28,9 @@ def test_div_float():
 
 @pytest.mark.expection
 def test_div_expection():
-    assert div(10, 'a')
-    assert div('avc', 10)
+    with pytest.raises(TypeError):
+        div(10, 'a')
+        div('avc', 10)
 
 
 @pytest.mark.expection
@@ -39,3 +40,7 @@ def test_div_zero():
     '''
     with pytest.raises(ZeroDivisionError):
         div(10, 0)
+
+def test_div_type():
+    with pytest.raises(TypeError):
+        div(10,'a')

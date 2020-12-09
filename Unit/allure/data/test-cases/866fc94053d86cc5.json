@@ -1,0 +1,65 @@
+{
+  "uid" : "866fc94053d86cc5",
+  "name" : "test_div_int[10-2-5]",
+  "fullName" : "Unit.test_div#test_div_int",
+  "historyId" : "ec4e7c08fa8f51f4de43b3fbb6a825f5",
+  "time" : {
+    "start" : 1607484686547,
+    "stop" : 1607484686547,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "abc"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Unit"
+  }, {
+    "name" : "suite",
+    "value" : "test_div"
+  }, {
+    "name" : "host",
+    "value" : "P80230531"
+  }, {
+    "name" : "thread",
+    "value" : "10040-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Unit.test_div"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expectation",
+    "value" : "5"
+  }, {
+    "name" : "number1",
+    "value" : "10"
+  }, {
+    "name" : "number2",
+    "value" : "2"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "abc" ]
+  },
+  "source" : "866fc94053d86cc5.json",
+  "parameterValues" : [ "5", "10", "2" ]
+}

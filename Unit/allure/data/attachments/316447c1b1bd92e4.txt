@@ -1,0 +1,4 @@
+setup_class：所有用例执行之前
+setup:类中单个用例执行之前
+正在执行----test_three
+teardown_method:类中单个用例执行之后
