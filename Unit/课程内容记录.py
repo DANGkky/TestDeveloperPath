@@ -5,10 +5,11 @@ test fixture
 test case
 test suite
 test runner
-'''
 
 
-'''
+pytest用例的class名，需要由大写的Test开头
+
+
 使用allure生成报告的方法
 先用命令生成一个报告
 (venv) D:\TestDeveloperLearn\TestDeveloper>pytest --alluredir=.\Unit\allure_results
