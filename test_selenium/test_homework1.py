@@ -42,3 +42,10 @@ class TestSeleniumWork():
         self.wait(5, EC.element_to_be_clickable(element2))
         # self.driver.find_element(By.CSS_SELECTOR, ".topic:nth-child(1) .title a").click()
         self.driver.find_element(*element2).click()
+
+    def test_1(self):
+
+        newwindow='window.open("https://www.baidu.com")'
+        self.driver.execute_script(newwindow)
+        # 创建新的窗口的方法
+        self.driver.switch_to.window(self.driver.window_handles[1])

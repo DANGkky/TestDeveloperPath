@@ -1,3 +1,4 @@
+from idlelib import window
 from time import sleep
 
 from selenium import webdriver
@@ -15,3 +16,5 @@ class Test_Homework2():
 
     def test_homework(self):
         self.driver.find_element(By.PARTIAL_LINK_TEXT,"中国软件测试行业问卷调研").click()
+        self.driver.switch_to.window(self.driver.window_handles[1])
+
