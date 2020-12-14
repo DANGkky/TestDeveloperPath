@@ -37,3 +37,14 @@ D:\TestDeveloperLearn\TestDeveloper\Unit\allure>python -m http.server
 【注意，打开地址的目录，需要和allure文件夹一样】
 '''
 
+
+def test_1(self):
+    newwindow = 'window.open("https://www.baidu.com")'
+    self.driver.execute_script(newwindow)
+    # 创建新的窗口的方法
+    self.driver.switch_to.window(self.driver.window_handles[1])
+    newwindow12 = 'window.open("https://www.bilibili.com")'
+    self.driver.execute_script(newwindow12)
+    self.driver.switch_to_window(self.driver.window_handles[2])
+    self.driver.switch_to_window(self.driver.window_handles[0])
+

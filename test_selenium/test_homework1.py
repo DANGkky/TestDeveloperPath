@@ -14,7 +14,7 @@ class TestSeleniumWork():
         self.driver.implicitly_wait(5)  # ！！！隐式等待  可以解决元素已经加载出来，但是因为dom同步等各种问题而不可点击的问题，会在设定时间内不断刷新尝试点击
 
     def teardown(self):
-        sleep(3)
+        sleep(5)
         self.driver.quit()
 
     def wait(self, timeout, method):
@@ -43,9 +43,22 @@ class TestSeleniumWork():
         # self.driver.find_element(By.CSS_SELECTOR, ".topic:nth-child(1) .title a").click()
         self.driver.find_element(*element2).click()
 
-    def test_1(self):
+    def test_js(self):
+        '''
+        执行JavaScript语句方式
+        '''
+        for code in ['return document.querySelector(".active").className',
+                     'return document.title'
+                     ]:
+            result = self.driver.execute_script(code)
+            print(result)
 
-        newwindow='window.open("https://www.baidu.com")'
+    def test_1(self):
+        newwindow = 'window.open("https://www.baidu.com")'
         self.driver.execute_script(newwindow)
         # 创建新的窗口的方法
         self.driver.switch_to.window(self.driver.window_handles[1])
+        newwindow12 = 'window.open("https://www.bilibili.com")'
+        self.driver.execute_script(newwindow12)
+        self.driver.switch_to_window(self.driver.window_handles[2])
+        self.driver.switch_to_window(self.driver.window_handles[0])
