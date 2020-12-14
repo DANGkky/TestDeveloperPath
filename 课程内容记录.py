@@ -1,4 +1,3 @@
-
 '''
 https://docs.python.org/3/library/unittest.html
 test fixture
@@ -47,4 +46,3 @@ def test_1(self):
     self.driver.execute_script(newwindow12)
     self.driver.switch_to_window(self.driver.window_handles[2])
     self.driver.switch_to_window(self.driver.window_handles[0])
-
