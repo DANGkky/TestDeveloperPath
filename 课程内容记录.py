@@ -39,10 +39,10 @@ D:\TestDeveloperLearn\TestDeveloper\Unit\allure>python -m http.server
 
 def test_1(self):
     newwindow = 'window.open("https://www.baidu.com")'
-    self.driver.execute_script(newwindow)
+    self._driver.execute_script(newwindow)
     # 创建新的窗口的方法
-    self.driver.switch_to.window(self.driver.window_handles[1])
+    self._driver.switch_to.window(self._driver.window_handles[1])
     newwindow12 = 'window.open("https://www.bilibili.com")'
-    self.driver.execute_script(newwindow12)
-    self.driver.switch_to_window(self.driver.window_handles[2])
-    self.driver.switch_to_window(self.driver.window_handles[0])
+    self._driver.execute_script(newwindow12)
+    self._driver.switch_to_window(self._driver.window_handles[2])
+    self._driver.switch_to_window(self._driver.window_handles[0])
