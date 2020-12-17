@@ -5,8 +5,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class BasePage:
-    def __init__(self, driver: WebDriver = None):   #之前定义driver时，没有说明driver是什么类型。默认是None，所以需要指定是webdriver
-        self._base_url = None
+    def __init__(self, driver: WebDriver = None):  # 之前定义driver时，没有说明driver是什么类型。默认是None，所以需要指定是webdriver
         if driver is None:
             self._driver = webdriver.Chrome()
             self._driver.implicitly_wait(5)
