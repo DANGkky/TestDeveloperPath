@@ -13,4 +13,5 @@ class Register(BasePage):
         error_msg = []
         for msg in self._driver.find_elements(By.CSS_SELECTOR, '.js_error_msg'):
             error_msg.append(msg.text)
+            print(msg.text)
         return error_msg

@@ -18,3 +18,5 @@ class TestIndex():
 
     def test_login(self):
         register_page = self.index.goto_login().goto_register().register('引擎测试组')
+        result=register_page.get_error_message()
+        assert '请选择' in '|'.join(result)

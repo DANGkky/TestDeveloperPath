@@ -14,6 +14,5 @@ class TestGotoRegister():
 
     def test_goto_register(self):
         register_page = self.index.goto_register().register('小游戏测试组')
-        result=register_page.get_error_msg()
-        print(result)
+        result = register_page.get_error_msg()
         assert '请选择' in '|'.join(result)
