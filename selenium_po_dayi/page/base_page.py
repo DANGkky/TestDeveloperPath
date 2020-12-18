@@ -15,3 +15,7 @@ class BasePage:
         else:
             self._driver = driver
         self._driver.implicitly_wait(2)
+
+    def quit(self):
+        print('quitquitquitquitquitquitquitquit')
+        self._driver.quit()

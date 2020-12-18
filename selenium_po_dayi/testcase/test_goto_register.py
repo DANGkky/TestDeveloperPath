@@ -10,7 +10,7 @@ class TestGotoRegister():
 
     def teardown(self):
         sleep(5)
-        # self._driver.quit()
+        self.index.quit()
 
     def test_goto_register(self):
         register_page = self.index.goto_register().register('小游戏测试组')
