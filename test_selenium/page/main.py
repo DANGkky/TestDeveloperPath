@@ -1,7 +1,10 @@
+from test_selenium.page.base_page import BasePage
 from test_selenium.page.contact import Contact
 
 
-class Main:
+class Main(BasePage):
+    _base_url = "https://work.weixin.qq.com/wework_admin/frame"
+
     def download(self):
         pass
 
@@ -12,7 +15,7 @@ class Main:
         pass
 
     def get_message(self):
-        return ['aaa','bbb']
+        return ['aaa', 'bbb']
 
     def add_member(self):
         return Contact()

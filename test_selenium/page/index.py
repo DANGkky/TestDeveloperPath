@@ -9,7 +9,7 @@ class Index(BasePage):
     _base_url = 'https://work.weixi.qq.com/'
 
     def goto_register(self):
-        self._driver.find_element(By.LINK_TEXT, '立即注册').click()  # 点击立即注册
+        self._driver.find_element(By.CSS_SELECTOR, '.index_head_info_pCDownloadBtn').click()  # 点击立即注册
         return Register(self._driver)
 
     def goto_login(self):
