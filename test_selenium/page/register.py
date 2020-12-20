@@ -8,10 +8,10 @@ from test_selenium.page.base_page import BasePage
 class Register(BasePage):
 
     def register(self, corpname):
-        WebDriverWait(self._driver, 10).until(expected_conditions.element_to_be_clickable((By.ID, 'corp_name')))
+        # WebDriverWait(self._driver, 10).until(expected_conditions.element_to_be_clickable((By.ID, 'corp_name')))
         self._driver.find_element(By.ID, 'corp_name').send_keys(corpname)
-        self._driver.find_element(By.ID, 'iagree').click()
-        WebDriverWait(self._driver, 10).until(expected_conditions.element_to_be_clickable((By.ID, 'submit_btn')))
+        # self._driver.find_element(By.ID, 'iagree').click()
+        # WebDriverWait(self._driver, 10).until(expected_conditions.element_to_be_clickable((By.ID, 'submit_btn')))
         self._driver.find_element(By.ID, 'submit_btn').click()
         return self
 

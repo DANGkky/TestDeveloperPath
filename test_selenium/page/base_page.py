@@ -10,8 +10,7 @@ class BasePage:
             self._driver = webdriver.Chrome()
             self._driver.implicitly_wait(5)
             self._driver.get("https://work.weixin.qq.com")
-
-            # self.driver.get(self._base_url)
+            # self._driver.get(self._base_url)
         else:
             self._driver = driver
 
