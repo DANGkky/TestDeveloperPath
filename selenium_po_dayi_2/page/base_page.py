@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver import ActionChains
 
 
 class BasePage:
@@ -17,7 +18,9 @@ class BasePage:
         self._driver.implicitly_wait(5)
 
     def find_element(self, by, locator=""):
+        # ActionChains(self._driver).move_to_element(self.find_element(xxx)).perform()
         if isinstance(by, tuple):
             return self._driver.find_element(*by)
         else:
             return self._driver.find_element(by, locator)
+

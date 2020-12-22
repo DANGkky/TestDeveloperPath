@@ -7,4 +7,4 @@ class TestContact:
 
     def test_contact(self):
         self.contact = self.main.goto_add_member().add_member()
-        # assert self.contact.get_member() == "Jacky"
+        assert self.contact.get_member() == "Jacky"
