@@ -11,3 +11,8 @@ class Main(BasePage):
         add_member_locator = (By.CSS_SELECTOR, '[node-type="addmember"]')
         self.find_element(add_member_locator).click()
         return Contact(reuse=True)
+
+    def import_user(self, path):
+        self.find_element((By.LINK_TEXT, '导入通讯录')).click()
+        self.find_element((By.CSS_SELECTOR, '[type="file"]')).send_keys(path)
+        self.find_element((By.CSS_SELECTOR, '.ww_fileImporter_submit')).click()

@@ -1,0 +1,4 @@
+这个文件夹是初步的PO练习内容，但是page页的BasePage内容总有报错。
+关于最终的PO内容要参考selenium_po_personal文件夹里的内容，属于个人对于PO重写的代码。
+
+该文件夹下的内容，重点参考三次homework的内容。
