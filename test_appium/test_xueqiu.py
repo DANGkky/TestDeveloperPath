@@ -35,14 +35,15 @@ class TestXueqiu:
         self.driver.find_element(MobileBy.ID, "search_input_text").click()
         self.driver.find_element(MobileBy.XPATH, '//android.widget.TextView[@text="阿里巴巴-SW"]').click()
         self.driver.find_element(MobileBy.XPATH, '//android.widget.TextView[@text="股票"]').click()
-        self.driver.find_element(MobileBy.XPATH,'//*[@text="09988"]/../../..//*[contains(@resource-id,"follow_btn")]').click()
+        self.driver.find_element(MobileBy.XPATH,
+                                 '//*[@text="09988"]/../../..//*[contains(@resource-id,"follow_btn")]').click()
+        # print(self.driver.page_source) 打印页面结构
         a = self.driver.find_element(MobileBy.XPATH,
                                      '//*[@text="09988"]/../../..//*[contains(@resource-id,"current_price")]').text
         assert float(a) > 200
         print(self.driver.find_element(MobileBy.XPATH,
                                        '//*[@text="09988"]/../../..//*[contains(@resource-id,"current_price")]').get_attribute(
             'resourceId'))
-
 
     def test_scroll(self):
         size = self.driver.get_window_size()
